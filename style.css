@@ -1,0 +1,25 @@
+#movie-modal-poster {
+  width: 100%;
+}
+.row1 {
+  width: 105%;
+  display: flex;
+  justify-content: space-between;
+}
+.fa {
+  margin-right: 0;
+  padding: 0 0 0 10px;
+}
+#search-input {
+  min-width: 135px;
+}
+.change-mode {
+  border: 0;
+  background-color: white;
+  padding: 0;
+}
+.list-body {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0 10px 0;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel='stylesheet' href="style.css">
+    <script src="https://kit.fontawesome.com/7992bdbc1a.js" crossorigin="anonymous"></script>
+    
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <h1 class="navbar-brand">Movie List</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./favorite.html">Favorite</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mt-5">
+    <div class="row1">
+        <!-- search bar -->
+        <form class="form-inline" style="display:flex;" id="search-form">
+            <input type="text" class="form-control mb-2 mr-sm-2" id="search-input" placeholder="Keyword"
+                style="width:30%">
+            <button type="submit" class="btn btn-primary mb-2" id="search-submit">Submit</button>
+        </form>
+        <div id='modeBtn'>
+            <div class='change-mode'><a><i class="fa fa-th picMode" aria-hidden="true"> </i></a><a><i
+                        class="fa fa-bars listMode" aria-hidden="true"> </i></a></div>
+        </div>
+    </div>
+
+    <div class="row" id="data-panel">
+        <!--movie list-->
+
+    </div>
+</div>
+<!--movie modal id should be the same with button.data-target-->
+<div class="modal" id="movie-modal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="movie-modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="movie-model-body">
+                <div class="row">
+                    <div class="col-sm-8" id="movie-modal-image">
+                        <img id="movie-modal-poster"
+                            src="https://webdev.alphacamp.io/posters/c9XxwwhPHdaImA2f1WEfEsbhaFB.jpg"
+                            alt="movie-poster">
+                    </div>
+                    <div class="col-sm-4">
+                        <p><em id="movie-modal-date">Release date:2020/01/01</em></p>
+                        <p id="movie-modal-description"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center" id="pagination">
+    </ul>
+</nav>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
